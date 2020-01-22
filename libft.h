@@ -6,22 +6,23 @@
 /*   By: mesafi <mesafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 23:42:38 by mesafi            #+#    #+#             */
-/*   Updated: 2020/01/20 12:04:24 by mesafi           ###   ########.fr       */
+/*   Updated: 2020/01/21 21:01:51 by mesafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 
 /*
- * Definitions
+ ** Definitions
 */
 
 # define LIBFT_H
 
 # define BUFF_SIZE 1000
+# define ABS(x) ((x < 0) ? -x : x )
 
 /*
- * Includes
+ ** Includes
 */
 
 # include <string.h>
@@ -30,7 +31,7 @@
 # include <fcntl.h>
 
 /*
- * Structures
+ ** Structures
 */
 
 typedef struct	s_lst
@@ -48,7 +49,7 @@ typedef	struct	s_list
 }				t_list;
 
 /*
- * libc Functions
+ ** libc Functions
 */
 
 int				ft_atoi(const char *str);
@@ -94,9 +95,11 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char const *s, int fd);
 void			ft_putendl_fd(char const *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
+char			*ft_strjoin_free(char const *s1, char const *s2, int option);
+int				get_int_len(int nbr);
 
 /*
- * Memory Functions
+ ** Memory Functions
 */
 
 void			*ft_memccpy(void *dest, const void *src, int c, size_t n);
@@ -110,7 +113,7 @@ int				ft_memcmp(const void *str1, const void *str2, size_t n);
 void			ft_bzero(void *s, size_t n);
 
 /*
- * Linked List Functions
+ ** Linked List Functions
 */
 
 t_list			*ft_lstnew(void const *content, size_t content_size);
@@ -128,7 +131,7 @@ void			ft_lstrm_i(t_list **head, int i);
 void			ft_putlst(t_list *head);
 
 /*
- * Extra Functions
+ ** Extra Functions
 */
 
 int				get_next_line(const int fd, char **line);

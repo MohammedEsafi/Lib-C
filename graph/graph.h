@@ -3,29 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   graph.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mesafi <mesafi@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: mesafi <mesafi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 13:18:53 by mesafi            #+#    #+#             */
-/*   Updated: 2020/01/15 15:03:53 by mesafi           ###   ########.fr       */
+/*   Updated: 2020/01/21 21:15:55 by mesafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GRAPH_H
 
 /*
- * Definitions
+ ** Definitions
 */
 
 # define GRAPH_H
 
 /*
- * Includes
+ ** Includes
 */
 
 # include "../libft.h"
 
 /*
- * Structures
+ ** Structures
 */
 
 typedef struct	s_graph
@@ -41,11 +41,11 @@ typedef struct	s_node
 }				t_node;
 
 /*
- * Graph Functions
+ ** Graph Functions
 */
 
 t_graph			*create_graph(unsigned int vertices);
 void			add_edge(t_graph *graph, unsigned int src, unsigned int dest);
 void			print_graph(t_graph *graph);
 
-# endif
+#endif
